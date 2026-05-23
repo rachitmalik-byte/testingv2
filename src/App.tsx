@@ -55,12 +55,11 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  useEffect(() => {
-    // FIX: Lenis smooth scroll on DESKTOP only.
-    // On touch/mobile → native momentum scrolling is faster and better UX.
-    // On reduced-motion → skip entirely, respect user preference.
-    if (isTouchDevice || prefersReducedMotion) return;
+useEffect(() => {
+  if (isTouchDevice || prefersReducedMotion) return;
 
+  // Defer until after first paint — stops the 116ms forced reflow on load
+  const timer = setTimeout(() => {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -75,10 +74,13 @@ export default function App() {
     rafId = requestAnimationFrame(raf);
 
     return () => {
-      cancelAnimationFrame(rafId); // FIX: was missing, caused RAF leak on route change
+      cancelAnimationFrame(rafId);
       lenis.destroy();
     };
-  }, []);
+  }, 500); // after first paint
+
+  return () => clearTimeout(timer);
+}, []);
 
   return (
     <>
