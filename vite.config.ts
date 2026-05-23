@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => {
         // Navbar.tsx, WorldMapLite.tsx import from 'framer-motion'
         // Everything else imports from 'motion/react'
         // Without this alias, Rollup bundles them as TWO separate chunks = ~80KB wasted
-        'framer-motion': 'motion/react',
+        
       },
     },
 
