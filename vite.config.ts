@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => {
     },
 
     build: {
-      target: 'es2020',           // Modern browsers → smaller output
+                 // Modern browsers → smaller output
       minify: 'terser',
       terserOptions: {
         compress: {
@@ -65,7 +65,7 @@ export default defineConfig(({ mode }) => {
 
       sourcemap: false,
       chunkSizeWarningLimit: 600,
-      cssCodeSplit: true,         // Each route gets only the CSS it needs
+              // Each route gets only the CSS it needs
     },
 
     server: {
