@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="965" height="467.93" viewBox="-2.5 23.53 965 467.93" style="background-color:#2d2d2d">
   <!-- Created using SVG Map Generator: dojo.amcharts.com/svg-map-generator -->
   <style>
-.land { fill: #ffffff; fill-opacity: 0.07; stroke: #ffffff; stroke-opacity: 0.15; stroke-width: 0.5; }
+  .land { fill: #ffffff; fill-opacity: 0.12; stroke: #111111; stroke-opacity: 0.4; stroke-width: 0.8; }
   </style>
   <g id="polygons">
     <path d="M957.93,271.78L957.87,271.54L957.95,271.65Z" class="land" id="TV" title="Tuvalu"/>
