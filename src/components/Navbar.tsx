@@ -31,9 +31,6 @@ export function Navbar() {
     { icon: Star, title: 'Case studies', desc: 'Our showcase of customer success stories', path: '/resources/casestudy' }
   ];
 
-  const { scrollY } = useScroll();
-  const smoothScrollY = useSpring(scrollY, { stiffness: 400, damping: 40 });
-  const rotateTransform = useTransform(smoothScrollY, [0, 1500], [0, 360]);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -65,19 +62,9 @@ export function Navbar() {
           to="/" 
           className="z-50 hover:opacity-80 transition-opacity"
         >
-          <motion.div 
-            whileHover={{ scale: 1.05, translateY: -2 }}
-            whileTap={{ scale: 0.95 }}
-            style={{ rotate: rotateTransform }}
-            className="flex items-center h-14 relative group transition-all duration-300"
-          >
-            <img 
-              src="https://previews.jumpshare.com/thumb/4ea2c443a4623ad282087187a00fc426fa967632df72c8ac9a7d22a8f7c157e2d36d986f3d088fbf7b1bc4d22e4ba5c372edcadcbb68033e0628ce4c668843ed96e0715d19b9104e6cfa51af11ecdf0c" 
-              alt="STEM AI TRAINERS" 
-              className="h-full w-auto object-contain z-10 scale-[1.15] mix-blend-multiply dark:mix-blend-lighten" 
-            />
-          </motion.div>
-        </Link>
+<motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex items-center h-12 relative group transition-all duration-300" > 
+  <img src="https://previews.jumpshare.com/thumb/4ea2c443a4623ad282087187a00fc426fa967632df72c8ac9a7d22a8f7c157e2d36d986f3d088fbf7b1bc4d22e4ba5c372edcadcbb68033e0628ce4c668843ed96e0715d19b9104e6cfa51af11ecdf0c" alt="STEM AI TRAINERS" className="h-full w-auto object-contain brightness-100 dark:brightness-110 drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)]" /> 
+</motion.div>
         
         <nav className="hidden md:flex items-center gap-6 lg:gap-8 relative">
           {mobileLinks.slice(0, 4).map((link) => (
