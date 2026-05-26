@@ -124,6 +124,7 @@ export function Navbar() {
                       </div>
                       <p className="text-xs text-secondary leading-relaxed pl-[3.25rem]">{item.desc}</p>
                     </Link>
+                      </motion.div>
                     );
                   })}
                 </motion.div>
@@ -182,7 +183,6 @@ export function Navbar() {
               >
                 {link.label}
               </Link>
-            </motion.div>
             ))}
           </motion.div>
         )}
