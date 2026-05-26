@@ -105,14 +105,13 @@ export function Navbar() {
                 >
                   {resourceLinks.map((item, idx) => {
                     const linkDest = item.path || `/resources?tab=${encodeURIComponent(item.tab || '')}`;
-                    return ( 
-                    <Link
-                      <motion.div
+                    return ( <motion.div
     variants={{
       hidden: { opacity: 0, y: 10 },
       visible: { opacity: 1, y: 0 }
     }}
   >
+                    <Link
                       key={idx}
                       to={linkDest}
                       className="group flex flex-col gap-2 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"
