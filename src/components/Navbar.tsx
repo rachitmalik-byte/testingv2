@@ -58,14 +58,11 @@ export function Navbar() {
             : 'w-full max-w-7xl bg-transparent border-transparent py-6 px-6 md:px-8 rounded-none'
         )}
       >
-        <Link 
-          to="/" 
-          className="z-50 hover:opacity-80 transition-opacity"
-        >
-<motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex items-center h-12 relative group transition-all duration-300" > 
-  <img src="https://previews.jumpshare.com/thumb/4ea2c443a4623ad282087187a00fc426fa967632df72c8ac9a7d22a8f7c157e2d36d986f3d088fbf7b1bc4d22e4ba5c372edcadcbb68033e0628ce4c668843ed96e0715d19b9104e6cfa51af11ecdf0c" alt="STEM AI TRAINERS" className="h-full w-auto object-contain brightness-100 dark:brightness-110 drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)]" /> 
-</motion.div>
-        
+        <Link to="/" className="z-50 transition-opacity flex items-center" > 
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex items-center h-12 relative group transition-all duration-300" > 
+            <img src="/SVG LOGO.svg" alt="STEM AI TRAINERS" className="h-full w-auto object-contain brightness-100 dark:brightness-110 drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)]" /> 
+          </motion.div> 
+        </Link>
         <nav className="hidden md:flex items-center gap-6 lg:gap-8 relative">
           {mobileLinks.slice(0, 4).map((link) => (
             <Link
