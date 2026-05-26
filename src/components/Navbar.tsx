@@ -183,6 +183,7 @@ export function Navbar() {
               >
                 {link.label}
               </Link>
+            </motion.div>
             ))}
           </motion.div>
         )}
