@@ -100,13 +100,19 @@ export function Navbar() {
                   initial={{ opacity: 0, y: 10, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 5, scale: 0.98 }}
-                  transition={{ duration: 0.2 }}
+                  transition={{ duration: 0.2, staggerChildren: 0.05, delayChildren: 0.02 }}
                   className="absolute top-full -left-48 mt-4 w-[800px] p-6 bg-white dark:bg-[#111] rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] border border-[rgba(0,0,0,0.05)] dark:border-[rgba(255,255,255,0.05)] z-50 grid grid-cols-3 gap-6"
                 >
                   {resourceLinks.map((item, idx) => {
                     const linkDest = item.path || `/resources?tab=${encodeURIComponent(item.tab || '')}`;
-                    return (
+                    return ( 
                     <Link
+                      <motion.div
+    variants={{
+      hidden: { opacity: 0, y: 10 },
+      visible: { opacity: 1, y: 0 }
+    }}
+  >
                       key={idx}
                       to={linkDest}
                       className="group flex flex-col gap-2 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"
