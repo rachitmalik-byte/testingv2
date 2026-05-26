@@ -4,12 +4,12 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 
 const nodes = [
-  { top: '32%', left: '22%', location: 'Silicon Valley', details: 'Node #01: 42 Active Mathematics PhDs' },
-  { top: '38%', left: '48%', location: 'London Lab', details: 'Node #02: 18 Quantum Physics Specialists' },
-  { top: '45%', left: '72%', location: 'Mumbai Core', details: 'Node #03: 35 Advanced Code Architecture Translators' },
-  { top: '58%', left: '61%', location: 'Singapore Hub', details: 'Node #04: 12 Computational Biology Labs' },
-  { top: '40%', left: '82%', location: 'Tokyo Vertex', details: 'Node #05: 24 Deep Logic Annotators' },
-  { top: '52%', left: '30%', location: 'Austin Cluster', details: 'Node #06: 15 Formal Proof Verifiers' },
+  { top: '30.5%', left: '16.5%', location: 'Silicon Valley', details: 'Node #01: 42 Active Mathematics PhDs' },
+  { top: '23.0%', left: '48.2%', location: 'London Lab', details: 'Node #02: 18 Quantum Physics Specialists' },
+  { top: '48.5%', left: '71.5%', location: 'Mumbai Core', details: 'Node #03: 35 Advanced Code Architecture Translators' },
+  { top: '55.0%', left: '77.5%', location: 'Singapore Hub', details: 'Node #04: 12 Computational Biology Labs' },
+  { top: '31.5%', left: '84.8%', location: 'Tokyo Vertex', details: 'Node #05: 24 Deep Logic Annotators' },
+  { top: '36.5%', left: '22.0%', location: 'Austin Cluster', details: 'Node #06: 15 Formal Proof Verifiers' },
 ];
 
 export default function WorldMapLite() {
