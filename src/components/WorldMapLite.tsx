@@ -21,7 +21,7 @@ export default function WorldMapLite() {
         loading="lazy"
         width="1200"
         height="600"
-        className="w-full h-full object-cover select-none pointer-events-none opacity-30"
+        className="w-full h-full object-cover select-none pointer-events-none opacity-30 dark:invert-0 invert"
       />
 
       {nodes.map((node, index) => (
