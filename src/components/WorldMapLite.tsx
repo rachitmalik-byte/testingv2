@@ -34,8 +34,8 @@ export default function WorldMapLite() {
           transition={{ duration: 2.5, repeat: Infinity, delay: index * 0.4 }}
         >
           <div className="relative">
-            <div className="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.9)]" />
-            <div className="absolute inset-0 rounded-full bg-cyan-400 animate-ping opacity-50" />
+            <div className="w-3 h-3 rounded-full bg-[#F26419] shadow-[0_0_20px_rgba(242,100,25,0.9)]" />
+              <div className="absolute inset-0 rounded-full bg-[#F26419] animate-ping opacity-50" />
           </div>
         </motion.div>
       ))}
